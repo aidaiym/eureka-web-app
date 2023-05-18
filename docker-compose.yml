@@ -34,3 +34,34 @@ services:
 
 volumes:
   postgres_data:
+
+
+# version: '3'
+
+# services:
+#   backend:
+#     build:
+#       context: ./backend
+#       dockerfile: Dockerfile
+#     ports:
+#       - 8000:8000
+#     environment:
+#       - DATABASE_URL=postgres://user:password@db:5432/dbname
+#     depends_on:
+#       - db
+
+#   frontend:
+#     build:
+#       context: ./frontend
+#       dockerfile: Dockerfile
+#     ports:
+#       - 3000:3000
+#     environment:
+#       - REACT_APP_BACKEND_URL=http://backend:8000
+
+#   db:
+#     image: postgres
+#     environment:
+#       - POSTGRES_USER=user
+#       - POSTGRES_PASSWORD=password
+#       - POSTGRES_DB=dbname
