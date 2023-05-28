@@ -3,6 +3,8 @@
 IT-120
 Developers:
 ```
+- Amanbekova Alina IT-120
+- Kasymbekov Eraaly  IT-120
 - Tursunalieva Aidaiym IT-120
 ```
 # Getting Started
