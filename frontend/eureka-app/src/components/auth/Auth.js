@@ -153,14 +153,14 @@ export default function (props) {
 
     if (authMode === "signin") {
       return (
-          <div className="Auth-form-container">
-            <form className="Auth-form" onSubmit={loginHandler}>
+          <div className="Auth-form-container" style={{ backgroundColor: '#b4d2ff' }}>
+            <form className="Auth-form" onSubmit={loginHandler} style={{ backgroundColor: '#6200EE' }}>
               <div className="Auth-form-content">
                 <h3 className="Auth-form-title">Sign In</h3>
                 <div className="text-center">
                   Not registered yet?{" "}
                   <p className="link-primary" onClick={changeAuthMode}>
-                    <a href="#">Sign Up</a>
+                    <a href="#" style={{ color: 'white' }}>Sign Up</a>
                   </p>
                 </div>
                 <div className="form-group mt-3">
@@ -170,7 +170,7 @@ export default function (props) {
                       className="form-control mt-1"
                       placeholder="Enter username"
                       required
-                      onChange={e => setUsername(e.target.value)}
+                      onChange={e => setUsername(e.target.value)} style={{ backgroundColor: '#b4d2ff' }}
                   />
                 </div>
                 <div className="form-group mt-3">
@@ -182,6 +182,7 @@ export default function (props) {
                       placeholder="Enter password"
                       required
                       onChange={e => setLoginPassword(e.target.value)}
+                      style={{ backgroundColor: '#b4d2ff' }}
                   />
                 </div>
                 <div className="d-grid gap-2 mt-3">
@@ -189,9 +190,6 @@ export default function (props) {
                     Submit
                   </button>
                 </div>
-                <p className="text-center mt-2">
-                  Forgot <a href="#">password?</a>
-                </p>
               </div>
             </form>
           </div>
@@ -199,16 +197,11 @@ export default function (props) {
     }
 
     return (
-        <div className="Auth-form-container">
-          <form className="Auth-form" onSubmit={register}>
+        <div className="Auth-form-container" style={{ backgroundColor: '#b4d2ff' }}>
+          <form className="Auth-form" onSubmit={register} style={{ backgroundColor: '#6200EE' }}>
             <div className="Auth-form-content">
               <h3 className="Auth-form-title">Sign Up</h3>
-              <div className="text-center">
-                Already registered?{" "}
-                <span className="link-primary" onClick={changeAuthMode}>
-              Sign In
-            </span>
-              </div>
+            
               <div className="form-group mt-3">
                 <label>Full Name</label>
                 <div className="row g-2">
@@ -217,6 +210,7 @@ export default function (props) {
                         className="form-control"
                         placeholder="First name"
                         onChange={e => setFirstName(e.target.value)}
+                        style={{ backgroundColor: '#b4d2ff' }}
                     />
                   </div>
                   <div className="col-md">
@@ -224,6 +218,7 @@ export default function (props) {
                         className="form-control"
                         placeholder="Last name"
                         onChange={e => setLastName(e.target.value)}
+                        style={{ backgroundColor: '#b4d2ff' }}
                     />
                   </div>
                 </div>
@@ -234,6 +229,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Username"
                     onChange={e => setUsername(e.target.value)}
+                    style={{ backgroundColor: '#b4d2ff' }}
                 />
               </div>
               <div className="form-group mt-3">
@@ -243,6 +239,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Email Address"
                     onChange={e => setEmail(e.target.value)}
+                    style={{ backgroundColor: '#b4d2ff' }}
                 />
               </div>
               <div className="form-group mt-3">
@@ -252,6 +249,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Password"
                     onChange={e => setPassword1(e.target.value)}
+                    style={{ backgroundColor: '#b4d2ff' }}
                 />
               </div>
                 <div className="form-group mt-3">
@@ -261,6 +259,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Repeat the password"
                     onChange={e => setPassword2(e.target.value)}
+                    style={{ backgroundColor: '#b4d2ff' }}
                 />
               </div>
               <div className="d-grid gap-2 mt-3">
@@ -268,9 +267,7 @@ export default function (props) {
                   Submit
                 </button>
               </div>
-              <p className="text-center mt-2">
-                Forgot <a href="#">password?</a>
-              </p>
+          
             </div>
           </form>
         </div>
