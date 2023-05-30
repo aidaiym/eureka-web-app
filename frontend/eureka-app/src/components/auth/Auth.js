@@ -58,7 +58,7 @@ export default function (props) {
             localStorage.setItem('refresh_token', response.data['refresh']);
             axios.defaults.headers.common['Authorization'] =
                 `Token ${response.data['access']}`;
-            window.location.href = '/'
+            window.location.href = '/course'
           })
           .catch(err => {console.log(err)})
   }
@@ -144,7 +144,7 @@ export default function (props) {
           axios.defaults.headers.common['Authorization'] =
                 `Token ${r.data['access']}`;
           console.log("success")
-          window.location.href = '/'
+          window.location.href = '/course'
         })
         .catch(err =>
             setError(err))
@@ -170,7 +170,7 @@ export default function (props) {
                       className="form-control mt-1"
                       placeholder="Enter username"
                       required
-                      onChange={e => setUsername(e.target.value)} style={{ backgroundColor: '#b4d2ff' }}
+                      onChange={e => setUsername(e.target.value)} style={{ backgroundColor: '#b4d2ff', color:'black'}}
                   />
                 </div>
                 <div className="form-group mt-3">
@@ -182,7 +182,7 @@ export default function (props) {
                       placeholder="Enter password"
                       required
                       onChange={e => setLoginPassword(e.target.value)}
-                      style={{ backgroundColor: '#b4d2ff' }}
+                      style={{ backgroundColor: '#b4d2ff', color:'black'}}
                   />
                 </div>
                 <div className="d-grid gap-2 mt-3">
@@ -197,7 +197,7 @@ export default function (props) {
     }
 
     return (
-        <div className="Auth-form-container" style={{ backgroundColor: '#b4d2ff' }}>
+        <div className="Auth-form-container" style={{ backgroundColor: '#b4d2ff', color:'black'}}>
           <form className="Auth-form" onSubmit={register} style={{ backgroundColor: '#6200EE' }}>
             <div className="Auth-form-content">
               <h3 className="Auth-form-title">Sign Up</h3>
@@ -210,7 +210,7 @@ export default function (props) {
                         className="form-control"
                         placeholder="First name"
                         onChange={e => setFirstName(e.target.value)}
-                        style={{ backgroundColor: '#b4d2ff' }}
+                        style={{ backgroundColor: '#b4d2ff', color:'black'}}
                     />
                   </div>
                   <div className="col-md">
@@ -218,7 +218,7 @@ export default function (props) {
                         className="form-control"
                         placeholder="Last name"
                         onChange={e => setLastName(e.target.value)}
-                        style={{ backgroundColor: '#b4d2ff' }}
+                        style={{ backgroundColor: '#b4d2ff', color:'black'}}
                     />
                   </div>
                 </div>
@@ -229,7 +229,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Username"
                     onChange={e => setUsername(e.target.value)}
-                    style={{ backgroundColor: '#b4d2ff' }}
+                    style={{ backgroundColor: '#b4d2ff', color:'black'}}
                 />
               </div>
               <div className="form-group mt-3">
@@ -239,7 +239,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Email Address"
                     onChange={e => setEmail(e.target.value)}
-                    style={{ backgroundColor: '#b4d2ff' }}
+                    style={{ backgroundColor: '#b4d2ff', color:'black'}}
                 />
               </div>
               <div className="form-group mt-3">
@@ -249,7 +249,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Password"
                     onChange={e => setPassword1(e.target.value)}
-                    style={{ backgroundColor: '#b4d2ff' }}
+                    style={{ backgroundColor: '#b4d2ff', color:'black'}}
                 />
               </div>
                 <div className="form-group mt-3">
@@ -259,7 +259,7 @@ export default function (props) {
                     className="form-control mt-1"
                     placeholder="Repeat the password"
                     onChange={e => setPassword2(e.target.value)}
-                    style={{ backgroundColor: '#b4d2ff' }}
+                    style={{ backgroundColor: '#b4d2ff', color:'black'}}
                 />
               </div>
               <div className="d-grid gap-2 mt-3">

@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import '../../App.css';
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { Modal } from "react-bootstrap";
@@ -83,10 +83,11 @@ function Course(props) {
                       </div>
                     ))}
                 </div>
-                  <div className="text-center mt-lg-4">
+                  <div className="text-center ">
+                  <img src="web.webp" className="card-img-top" style={{width: 450}} alt="..."/>
                       <button type="button"
                               className="btn btn-primary"
-                              onClick={handleShow}>Create one</button>
+                              onClick={handleShow} style={{marginLeft: 40}}>Create Course</button>
                   </div>
               </div>
         </div>
@@ -95,28 +96,28 @@ function Course(props) {
           style={{ height: "10vh" }}>
 
         </div>
-        <Modal className="my-modal" show={showModal} onHide={handleClose}>
-          <Modal.Header closeButton>
+        <Modal className="my-modal" show={showModal} onHide={handleClose} style={{ backgroundColor: '#b4d2ff' }}>
+          <Modal.Header closeButton style={{ backgroundColor: '#6200EE' }}>
             <Modal.Title className="text-white">Create course</Modal.Title>
           </Modal.Header>
-          <Modal.Body className="text-white">
+          <Modal.Body className="text-white" style={{ backgroundColor: '#6200EE' }}>
             <label>Course title</label>
             <div className="input-group mb-3">
               <input type="text"
                 className="form-control mt-1"
                 placeholder="C++, Java or Python..."
-                onChange={e => setTitle(e.target.value)} />
+                onChange={e => setTitle(e.target.value)} style={{ backgroundColor: '#b4d2ff', color:'black'}}/>
             </div>
             <label>Description</label>
             <div className="input-group mb-3">
               <textarea
                 className="form-control mt-1"
                 placeholder="Describe your awesome course"
-                onChange={e => setDescription(e.target.value)}></textarea>
+                onChange={e => setDescription(e.target.value)} style={{ backgroundColor: '#b4d2ff', color:'black'}}></textarea>
             </div>
             <label>Choose a poster</label>
             <div className="input-group mb-3">
-              <input type="file" className="form-control mt-1" onChange={handleFileSelect} />
+              <input type="file" className="form-control mt-1" onChange={handleFileSelect} style={{ backgroundColor: '#b4d2ff', color:'black'}}/>
             </div>
             <label>Price and discount</label>
             <div className="row g-2">
@@ -125,6 +126,7 @@ function Course(props) {
                   className="form-control mt-1"
                   placeholder="150$"
                   onChange={e => setPrice(e.target.value)}
+                  style={{ backgroundColor: '#b4d2ff', color:'black'}}
                 />
               </div>
               <div className="col-md">
@@ -132,12 +134,13 @@ function Course(props) {
                   className="form-control mt-1"
                   placeholder="30%"
                   onChange={e => setDiscount(e.target.value)}
+                  style={{ backgroundColor: '#b4d2ff', color:'black'}}
                 />
               </div>
             </div>
 
           </Modal.Body>
-          <Modal.Footer>
+          <Modal.Footer style={{ backgroundColor: '#6200EE' }}>
             <Button variant="secondary" onClick={handleClose} className="text-white">
               Close
             </Button>
